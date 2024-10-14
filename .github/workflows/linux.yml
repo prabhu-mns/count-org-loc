@@ -25,7 +25,9 @@ jobs:
           ruby-version: 3.0
 
       - name: Install Dependencies and Cleanup
-        run: sudo apt-get install -y cloc
+        run: | 
+          sudo apt-get update
+          sudo apt-get install -y cloc
 
       - name: Calculating LoC for each org
         run: |
@@ -49,7 +51,9 @@ jobs:
           ruby-version: 3.0
 
       - name: Install Dependencies and Cleanup
-        run: sudo apt-get install -y cloc
+        run: | 
+          sudo apt-get update
+          sudo apt-get install -y cloc
 
       - name: Calculating LoC for each org
         run: |
