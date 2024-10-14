@@ -14,7 +14,7 @@ env:
   GITHUB_TOKEN: ${{ secrets.ORG_GITHUB_TOKEN }}
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: github-selfhosted-runner-autoscaler-cor
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -34,11 +34,11 @@ jobs:
             bundle exec ruby loc.rb "$org"
           done
   prod:
-    timeout-minutes: 60
+    timeout-minutes: 150
     needs: test
     #May need to add a "Pay as you go", larger GitHub-hosted runner depending on the size of each repo
     #See https://docs.github.com/en/actions/using-github-hosted-runners/about-larger-runners/about-larger-runners
-    runs-on: ubuntu-latest
+    runs-on: github-selfhosted-runner-autoscaler-cor
     steps:
       - name: Checkout
         uses: actions/checkout@v3
