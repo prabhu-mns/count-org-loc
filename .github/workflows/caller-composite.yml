@@ -8,4 +8,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run Composite Action from Another Repo
-        uses: prabhu-mns/test/.github/actions@master
+        uses: prabhu-mns/test/.github/actions@main
