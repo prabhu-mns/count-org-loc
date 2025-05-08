@@ -9,7 +9,7 @@ jobs:
     permissions: # Grant access to the private repository
       contents: read    
     steps:
-      - name: Authenticate to GitHub
+      #- name: Authenticate to GitHub
         # uses: actions/checkout@v3
         # with:
         #   token: ${{ secrets.ACCESS_TOKEN }} # Use the PAT configured as a secret    
