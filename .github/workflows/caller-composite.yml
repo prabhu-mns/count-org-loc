@@ -1,0 +1,11 @@
+name: Use Composite from Another Repo
+ 
+on:
+  workflow_dispatch:
+ 
+jobs:
+  run-composite:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run Composite Action from Another Repo
+        uses: prabhu-mns/test/.github/actions@master
